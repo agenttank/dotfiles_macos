@@ -51,3 +51,6 @@ I also made a few settings to MacOS
 ### disable lots of MacOS keyboard shortcuts in the MacOS settings
 - disable command+Q in MacOS system settings
 
+### Move windows by dragging any part of the window (by holding ctrl+cmd)
+`defaults write -g NSWindowShouldDragOnGesture -bool true`
+
