@@ -39,3 +39,14 @@ zsh & oh-my-zsh
 
 Browser:  
 qutebrowser
+
+
+MacOS settings:
+I also made a few settings to MacOS  
+
+### disable window animations
+`defaults write -g NSAutomaticWindowAnimationsEnabled -bool false`
+
+### disable lots of MacOS keyboard shortcuts in the MacOS settings
+- disable command+Q in MacOS system settings
+
