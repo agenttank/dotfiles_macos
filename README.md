@@ -61,6 +61,7 @@ Control Center - Enable menu bar autohide here
 having desktop icons is not very user-friendly together with tiling window managers and, be honest, it is cluttered most of the time anyways so it is recommended to disable them in "Desktop & Dock"  
 
 ### disable window animations
+Run in terminal:  
 `defaults write -g NSAutomaticWindowAnimationsEnabled -bool false`
 
 ### reduce motion (for native fullscreen functionality and maybe some more unnecessary animations)
@@ -71,6 +72,7 @@ having desktop icons is not very user-friendly together with tiling window manag
 - be ready to disable a few more, as I am unsure about what other shortcuts might collide
 
 ### Move windows by dragging any part of the window (by holding ctrl+cmd)
+Run in terminal:  
 `defaults write -g NSWindowShouldDragOnGesture -bool true`
 
 ### Displays have separate Spaces
