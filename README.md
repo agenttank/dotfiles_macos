@@ -7,43 +7,51 @@
 
 ## really great applications that I use
 
-Aerospace  
+- Aerospace  
+The best tiling window manager for MacOS
 https://github.com/nikitabobko/AeroSpace
 
-Sketchybar  
+- Sketchybar  
+The highly configurable top bar
 https://github.com/FelixKratz/SketchyBar
 
-Sketchybar configuration  
+- Sketchybar configuration  
+a really good lua scripted Sketchybar configuration
 https://github.com/bfpimentel/nixos.git
 
-Required Font for Sketchybar  
+- Required Font for Sketchybar  
 `font-space-mono-nerd-font`
 
-alacritty   
+- alacritty   
+A fast terminal that lets you disable decorations 
 https://github.com/alacritty/alacritty
 
-borders  
+- borders  
+see what window is in focus at the moment - it makes a colored border appear
 https://github.com/FelixKratz/JankyBorders
 
-brew packages  
+- brew packages  
 see `brew.txt`
 
-Wallpaper
+- Wallpaper
 https://www.reddit.com/r/wallpapers/
 https://www.reddit.com/r/wallpapers/comments/1eibln5/abstract_circle_3840x2160/
 
 ## Other information
 
-Shell:  
+- Shell
 zsh & oh-my-zsh
 
-Browser:  
-qutebrowser
+- Browser
+qutebrowser - A great browser that lets you browse the internet via keyboard/vim controls
+https://qutebrowser.com/
 
 
 ## MacOS settings
 
 I also made a few settings to MacOS  
+### make Dock and the native MacOS bar auto-hide  
+somewhere in the macOS settings
 
 ### disable window animations
 `defaults write -g NSAutomaticWindowAnimationsEnabled -bool false`
