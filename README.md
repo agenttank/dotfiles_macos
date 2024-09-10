@@ -39,8 +39,9 @@ https://www.reddit.com/r/wallpapers/comments/1eibln5/abstract_circle_3840x2160/
 
 ## Other information
 
-- Shell
-zsh & oh-my-zsh
+- Shell  
+zsh  
+oh-my-zsh  
 
 - Browser  
 qutebrowser - A great browser that lets you browse the internet via keyboard/vim controls
