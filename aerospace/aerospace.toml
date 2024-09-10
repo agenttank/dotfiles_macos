@@ -76,6 +76,7 @@ cmd-w = []
 # All possible modifiers: cmd, alt, ctrl, shift
 
 cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
+cmd-e = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Marta.app'
 
 cmd-shift-f = 'macos-native-fullscreen'
 cmd-f = 'fullscreen'
