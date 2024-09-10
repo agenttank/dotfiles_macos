@@ -1,0 +1,31 @@
+behavior {
+    theme "Kon"
+    
+    
+    layout {
+        alwaysShowTabBar false
+        showActionBar false
+    }
+    
+    quickSelect {
+        activateOnAnyCharacter false
+    }
+    
+}
+
+
+keyBindings {
+    "Cmd+O" "core.actions"
+    "Shift+7" "core.lookup.here"
+    "Ctrl+F" "core.lookup"
+    "H" "core.move.left"
+    "L" "core.move.right"
+    "K" "core.move.up"
+    "J" "core.move.down"
+    "D" "core.delete"
+    "Y" "core.clipboard.copy"
+    "P" "core.clipboard.paste"
+
+
+    }
+    

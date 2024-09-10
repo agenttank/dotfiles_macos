@@ -26,6 +26,11 @@ https://github.com/bfpimentel/nixos.git
 A fast terminal that lets you disable decorations 
 https://github.com/alacritty/alacritty
 
+- marta
+Great alternative to Finder which allows vim-style bindings. I "disable" the second pane now by moving the separator 100% to the right. Does not search for configuration in .config, so I symlinked it like this:
+
+`ln -s ~/.config/marta/conf.marco ~/Library/Application Support/org.yanex.marta/conf.marco`
+
 - borders  
 see what window is in focus at the moment - it makes a colored border appear
 https://github.com/FelixKratz/JankyBorders
