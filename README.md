@@ -32,5 +32,10 @@ Wallpaper
 https://www.reddit.com/r/wallpapers/
 https://www.reddit.com/r/wallpapers/comments/1eibln5/abstract_circle_3840x2160/
 
-Other information
+## Other information
+
+Shell:  
 zsh & oh-my-zsh
+
+Browser:  
+qutebrowser
