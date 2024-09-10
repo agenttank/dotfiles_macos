@@ -1,0 +1,55 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "Buttonless"
+
+
+opacity = 0.30
+blur = true
+
+#option_as_alt = "Both"
+
+[font]
+normal.family = "Menlo"
+
+size = 18
+
+
+#theme 
+#
+#https://github.com/alacritty/alacritty-theme/blob/4091fddff8da892d5594e94116927c7445620867/themes/citylights.toml
+
+# Default colors
+[colors.primary]
+background = '#171d23'
+foreground = '#ffffff'
+
+# Cursor colors
+[colors.cursor]
+text   = '#fafafa'
+cursor = '#008b94'
+
+# Normal colors
+[colors.normal]
+black   = '#333f4a'
+red     = '#d95468'
+green   = '#8bd49c'
+blue    = '#539afc'
+magenta = '#b62d65'
+cyan    = '#70e1e8'
+white   = '#b7c5d3'
+
+# Bright colors
+[colors.bright]
+black   = '#41505e'
+red     = '#d95468'
+green   = '#8bd49c'
+yellow  = '#ebbf83'
+blue    = '#5ec4ff'
+magenta = '#e27e8d'
+cyan    = '#70e1e8'
+white   = '#ffffff'

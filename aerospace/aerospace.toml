@@ -1,0 +1,206 @@
+# AEROSPACE CONFIG
+start-at-login = true
+
+after-login-command = []
+
+after-startup-command = [
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFCBC2B1 inactive_color=0x33434c5e width=4.0',
+     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
+]
+
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
+on-focused-monitor-changed = [
+  'move-mouse monitor-lazy-center'
+]
+
+on-focus-changed = [
+  'move-mouse window-lazy-center',
+  'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
+  'exec-and-forget sketchybar --trigger update_windows'
+]
+
+enable-normalization-flatten-containers = false
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+key-mapping.preset = 'qwerty'
+
+[gaps]
+inner.horizontal = 10
+inner.vertical =   10
+outer.left =       13
+outer.right =      13
+outer.bottom =     10
+#outer.top =        50
+outer.top =        [{monitor.'^built-in retina display$' = 20 }, 52]
+
+[exec]                   # Again, you don't need to copy all config sections to your config.
+inherit-env-vars = true  # If you don't touch "exec" section,
+[exec.env-vars]          # it will fallback to "default-config.toml"
+PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+
+[mode.main.binding]
+cmd-space = 'layout floating tiling'
+cmd-r = [
+  'mode resize',
+  'exec-and-forget sketchybar --trigger send_message MESSAGE="RESIZE MODE" HOLD="true"'
+]
+
+cmd-g = 'mode join'
+cmd-q = [
+  'close --quit-if-last-window'
+]
+cmd-w = []
+
+# All possible keys:
+# - Letters.        a, b, c, ..., z
+# - Numbers.        0, 1, 2, ..., 9
+# - Keypad numbers. keypad0, keypad1, keypad2, ..., keypad9
+# - F-keys.         f1, f2, ..., f20
+# - Special keys.   minus, equal, period, comma, slash, backslash, quote, semicolon, backtick,
+#                   leftSquareBracket, rightSquareBracket, space, enter, esc, backspace, tab
+# - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
+#                   keypadMinus, keypadMultiply, keypadPlus
+# - Arrows.         left, down, up, right
+
+# All possible modifiers: cmd, alt, ctrl, shift
+
+cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
+
+cmd-shift-f = 'macos-native-fullscreen'
+cmd-f = 'fullscreen'
+
+alt-g = 'split horizontal'
+alt-v = 'split vertical'
+
+cmd-h = 'focus --boundaries all-monitors-outer-frame left'
+cmd-j = 'focus --boundaries all-monitors-outer-frame down'
+cmd-k = 'focus --boundaries all-monitors-outer-frame up'
+cmd-l = 'focus --boundaries all-monitors-outer-frame right'
+cmd-left = 'focus --boundaries all-monitors-outer-frame left'
+cmd-down = 'focus --boundaries all-monitors-outer-frame down'
+cmd-up = 'focus --boundaries all-monitors-outer-frame up'
+cmd-right = 'focus --boundaries all-monitors-outer-frame right'
+
+cmd-shift-h = 'move left'
+cmd-shift-j = 'move down'
+cmd-shift-k = 'move up'
+cmd-shift-l = 'move right'
+cmd-shift-left = 'move left'
+cmd-shift-down = 'move down'
+cmd-shift-up = 'move up'
+cmd-shift-right = 'move right'
+
+cmd-1 = 'workspace --auto-back-and-forth 1'
+cmd-2 = 'workspace --auto-back-and-forth 2'
+cmd-3 = 'workspace --auto-back-and-forth 3'
+cmd-4 = 'workspace --auto-back-and-forth 4'
+cmd-5 = 'workspace --auto-back-and-forth 5'
+cmd-6 = 'workspace --auto-back-and-forth 6'
+cmd-7 = 'workspace --auto-back-and-forth 7'
+cmd-8 = 'workspace --auto-back-and-forth 8'
+cmd-9 = 'workspace --auto-back-and-forth 9'
+cmd-0 = 'workspace --auto-back-and-forth 10'
+cmd-t = 'workspace --auto-back-and-forth t'
+
+
+cmd-shift-1 = 'move-node-to-workspace 1'
+cmd-shift-2 = 'move-node-to-workspace 2'
+cmd-shift-3 = 'move-node-to-workspace 3'
+cmd-shift-4 = 'move-node-to-workspace 4'
+cmd-shift-5 = 'move-node-to-workspace 5'
+cmd-shift-6 = 'move-node-to-workspace 6'
+cmd-shift-7 = 'move-node-to-workspace 7'
+cmd-shift-8 = 'move-node-to-workspace 8'
+cmd-shift-9 = 'move-node-to-workspace 9'
+cmd-shift-0 = 'move-node-to-workspace 10'
+cmd-shift-t = 'move-node-to-workspace t'
+
+cmd-tab = 'workspace-back-and-forth'
+cmd-p = 'move-workspace-to-monitor --wrap-around next'
+cmd-shift-p = [
+  'move-node-to-monitor --wrap-around next',
+  'focus-monitor next --wrap-around' 
+]
+cmd-alt-h = []
+
+cmd-shift-s = [
+  'mode service',
+  'exec-and-forget sketchybar --trigger send_message MESSAGE="SERVICE MODE" HOLD="true"'
+]
+
+[mode.service.binding]
+esc = [
+ 'reload-config',
+ 'exec-and-forget sketchybar --trigger hide_message',
+ 'exec-and-forget sketchybar --reload',
+ 'mode main'
+]
+r = ['flatten-workspace-tree', 'mode main'] # reset layout
+#s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+
+backspace = ['close-all-windows-but-current', 'mode main']
+
+[mode.resize.binding]
+h = 'resize smart -70'
+l = 'resize smart +70'
+esc = [
+  'mode main',
+  'exec-and-forget sketchybar --trigger hide_message'
+]
+enter = 'mode main'
+
+[mode.join.binding]
+h = ['join-with left', 'mode main']
+j = ['join-with down', 'mode main']
+k = ['join-with up', 'mode main']
+l = ['join-with right', 'mode main']
+cmd-h = ['join-with left', 'mode main']
+cmd-alt-h = ['join-with left', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'org.qutebrowser.qutebrowser'
+run = ['layout tiling', 'move-node-to-workspace 3']
+
+#[[on-window-detected]]
+#if.app-id = 'md.obsidian'
+#run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'              
+run = ['move-node-to-workspace 9']  
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'              
+run = ['move-node-to-workspace 7']  
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'              
+run = ['move-node-to-workspace 8']  
+
+[[on-window-detected]]
+if.app-id = 'com.bitwarden.desktop'              
+run = ['move-node-to-workspace 10']  
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.edgemac'              
+run = ['move-node-to-workspace 4']  
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.rdc.macos'              
+run = ['move-node-to-workspace 5']  
+
+[[on-window-detected]]
+if.app-id = 'org.jkiss.dbeaver.core.product'              
+run = ['move-node-to-workspace 6']  
+
