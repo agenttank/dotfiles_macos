@@ -158,7 +158,10 @@ esc = [
   'mode main',
   'exec-and-forget sketchybar --trigger hide_message'
 ]
-enter = 'mode main'
+enter = [
+  'mode main',
+  'exec-and-forget sketchybar --trigger hide_message'
+]
 
 [mode.join.binding]
 h = ['join-with left', 'mode main']
