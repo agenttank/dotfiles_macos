@@ -101,17 +101,17 @@ cmd-shift-down = 'move down'
 cmd-shift-up = 'move up'
 cmd-shift-right = 'move right'
 
-cmd-1 = 'workspace --auto-back-and-forth 1'
-cmd-2 = 'workspace --auto-back-and-forth 2'
-cmd-3 = 'workspace --auto-back-and-forth 3'
-cmd-4 = 'workspace --auto-back-and-forth 4'
-cmd-5 = 'workspace --auto-back-and-forth 5'
-cmd-6 = 'workspace --auto-back-and-forth 6'
-cmd-7 = 'workspace --auto-back-and-forth 7'
-cmd-8 = 'workspace --auto-back-and-forth 8'
-cmd-9 = 'workspace --auto-back-and-forth 9'
-cmd-0 = 'workspace --auto-back-and-forth 10'
-cmd-t = 'workspace --auto-back-and-forth t'
+cmd-1 = 'workspace --auto-back-and-forth 1'  # Notes
+cmd-2 = 'workspace --auto-back-and-forth 2'  # Terminal
+cmd-3 = 'workspace --auto-back-and-forth 3'  # Browser
+cmd-4 = 'workspace --auto-back-and-forth 4'  # AltBrowser
+cmd-5 = 'workspace --auto-back-and-forth 5'  # Remote
+cmd-6 = 'workspace --auto-back-and-forth 6'  # Database
+cmd-7 = 'workspace --auto-back-and-forth 7'  # Chat
+cmd-8 = 'workspace --auto-back-and-forth 8'  # Mail
+cmd-9 = 'workspace --auto-back-and-forth 9'  # Music
+cmd-0 = 'workspace --auto-back-and-forth 10' # Secrets
+cmd-t = 'workspace --auto-back-and-forth t'  # Meeting
 
 
 cmd-shift-1 = 'move-node-to-workspace 1'
