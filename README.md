@@ -58,8 +58,12 @@ somewhere in the macOS settings
 ### disable window animations
 `defaults write -g NSAutomaticWindowAnimationsEnabled -bool false`
 
+### reduce motion (for native fullscreen functionality and maybe some more unnecessary animations)
+- System Preferences > Accessibility > Display > Reduce motion
+
 ### disable lots of MacOS keyboard shortcuts in the MacOS settings
 - disable command+Q in MacOS system settings
+- be ready to disable a few more, as I am unsure about what other shortcuts might collide
 
 ### Move windows by dragging any part of the window (by holding ctrl+cmd)
 `defaults write -g NSWindowShouldDragOnGesture -bool true`
