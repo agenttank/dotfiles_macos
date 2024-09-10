@@ -17,7 +17,7 @@ Sketchybar configuration
 https://github.com/bfpimentel/nixos.git
 
 Required Font for Sketchybar  
-font-space-mono-nerd-font
+`font-space-mono-nerd-font`
 
 alacritty   
 https://github.com/alacritty/alacritty
@@ -26,5 +26,5 @@ borders
 https://github.com/FelixKratz/JankyBorders
 
 brew packages  
-(see brew.txt)
+(see `brew.txt`)
 
