@@ -68,3 +68,8 @@ somewhere in the macOS settings
 ### Move windows by dragging any part of the window (by holding ctrl+cmd)
 `defaults write -g NSWindowShouldDragOnGesture -bool true`
 
+### Displays have separate Spaces
+Enable this in MacOS settings "Desktop and dock" or else Sketchybar will not start. In generall Aerospace recommends disabling this though.  
+https://nikitabobko.github.io/AeroSpace/guide#a-note-on-displays-have-separate-spaces  
+Sketchybar might work with the option being disabled in the future.  
+https://github.com/FelixKratz/SketchyBar/issues/495  
