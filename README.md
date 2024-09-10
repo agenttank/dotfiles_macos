@@ -51,7 +51,7 @@ https://github.com/gicrisf/qute-city-lights
 
 ## MacOS settings
 
-I also made a few settings to MacOS  
+I also changed a few settings in MacOS because the defaults interfere with this config
 ### make Dock and the native MacOS bar auto-hide  
 somewhere in the macOS settings
 
