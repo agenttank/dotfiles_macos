@@ -52,8 +52,13 @@ https://github.com/gicrisf/qute-city-lights
 ## MacOS settings
 
 I also changed a few settings in MacOS because the defaults interfere with this config
+
 ### make Dock and the native MacOS bar auto-hide  
-somewhere in the macOS settings
+Desktop & Dock - Autohide Dock can be here somewhere  
+Control Center - Enable menu bar autohide here  
+
+### disable desktop icons
+having desktop icons is not very user-friendly together with tiling window managers and, be honest, it is cluttered most of the time anyways so it is recommended to disable them in "Desktop & Dock"  
 
 ### disable window animations
 `defaults write -g NSAutomaticWindowAnimationsEnabled -bool false`
@@ -69,7 +74,8 @@ somewhere in the macOS settings
 `defaults write -g NSWindowShouldDragOnGesture -bool true`
 
 ### Displays have separate Spaces
-Enable this in MacOS settings "Desktop and dock" or else Sketchybar will not start. In generall Aerospace recommends disabling this though.  
-https://nikitabobko.github.io/AeroSpace/guide#a-note-on-displays-have-separate-spaces  
+Enable this in MacOS settings "Desktop & dock" or else Sketchybar will not start. In general Aerospace recommends disabling this though.  
+Read about it here: https://nikitabobko.github.io/AeroSpace/guide#a-note-on-displays-have-separate-spaces  
+
 Sketchybar might work with the option being disabled in the future.  
 https://github.com/FelixKratz/SketchyBar/issues/495  
