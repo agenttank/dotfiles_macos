@@ -7,24 +7,24 @@
 
 ## really great applications that I use
 
-Aerospace
+Aerospace  
 https://github.com/nikitabobko/AeroSpace
 
-Sketchybar
+Sketchybar  
 https://github.com/FelixKratz/SketchyBar
 
-Sketchybar configuration
+Sketchybar configuration  
 https://github.com/bfpimentel/nixos.git
 
-Required Font for Sketchybar
+Required Font for Sketchybar  
 font-space-mono-nerd-font
 
-alacritty 
+alacritty   
 https://github.com/alacritty/alacritty
 
-borders
+borders  
 https://github.com/FelixKratz/JankyBorders
 
-brew packages
+brew packages  
 (see brew.txt)
 
