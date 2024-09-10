@@ -41,7 +41,8 @@ Browser:
 qutebrowser
 
 
-MacOS settings:
+## MacOS settings:
+
 I also made a few settings to MacOS  
 
 ### disable window animations
