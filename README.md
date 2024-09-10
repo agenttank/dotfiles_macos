@@ -33,7 +33,7 @@ https://github.com/FelixKratz/JankyBorders
 - brew packages  
 see `brew.txt`
 
-- Wallpaper
+- Wallpaper  
 https://www.reddit.com/r/wallpapers/  
 https://www.reddit.com/r/wallpapers/comments/1eibln5/abstract_circle_3840x2160/
 
