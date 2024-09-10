@@ -45,8 +45,9 @@ oh-my-zsh
 
 - Browser  
 qutebrowser - A great browser that lets you browse the internet via keyboard/vim controls
-https://qutebrowser.com/
-
+https://qutebrowser.com/  
+qutebrowser theme  
+https://github.com/gicrisf/qute-city-lights  
 
 ## MacOS settings
 
