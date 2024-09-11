@@ -16,9 +16,12 @@ The highly configurable top bar
 https://github.com/FelixKratz/SketchyBar
 
 - Sketchybar configuration  
+https://github.com/bfpimentel/nixos.git  
 a really good lua scripted Sketchybar configuration  
+
 (make sure to install lua: `brew install lua`)   
-https://github.com/bfpimentel/nixos.git
+Modify `.config/sketchybar/items/spaces.lua` according to what spaces you have configured in aerospace.toml. I added further hints in the spaces.lua file.  
+
 
 - Required Font for Sketchybar  
 `font-space-mono-nerd-font`
