@@ -33,6 +33,7 @@ keyBindings {
     "K" "core.move.up"
     "J" "core.move.down"
     "D" "core.delete"
+    "S" "core.select.move.down"
     "Y" "core.clipboard.copy"
     "P" "core.clipboard.paste"
     "M" "core.move"
@@ -43,11 +44,17 @@ keyBindings {
     "Ctrl+U" "core.move.half.page.up"
     "Ctrl+D" "core.move.half.page.down"
     "I" "core.finder.showInfo"
-    "Shift+Y" "core.path"
+    "Shift+Y" "core.path.folder"
     "0" "core.hierarchy"
     "1" "core.volumes"
     "2" "core.favorites"
     "Shift+2" "core.favorites.add"
     "3" "core.recent"
+    "Q" "core.tab.close"
+    "U" {
+        id "core.disk.usage"
+        mode "samePane"
+        src "."
+    }
 
     }
