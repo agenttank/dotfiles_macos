@@ -23,7 +23,7 @@ a really good lua scripted Sketchybar configuration
 Modify `.config/sketchybar/items/spaces.lua` according to what spaces you have configured in aerospace.toml. I added further hints in the spaces.lua file.  
 
 - brew  
-A Package manager for MacOS that is needed/can be used to install great open source software like Aerospace. 
+A Package manager for MacOS that is needed/can be used to install great open source software like Aerospace.   
 https://brew.sh/
 
 - Required Font for Sketchybar  
