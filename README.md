@@ -19,8 +19,8 @@ https://github.com/FelixKratz/SketchyBar
 https://github.com/bfpimentel/nixos.git  
 a really good lua scripted Sketchybar configuration  
 
-(make sure to install lua: `brew install lua`)   
-Modify `.config/sketchybar/items/spaces.lua` according to what spaces you have configured in aerospace.toml. I added further hints in the spaces.lua file.  
+Make sure to install lua: `brew install lua`
+Modify `.config/sketchybar/items/spaces.lua` according to what spaces you have configured in `aerospace.toml`. I added further hints in the `spaces.lua` file.  
 
 - brew  
 A Package manager for MacOS that is needed/can be used to install great open source software like Aerospace.   
