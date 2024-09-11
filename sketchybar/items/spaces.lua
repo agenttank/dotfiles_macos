@@ -13,6 +13,8 @@ local currentWorkspaceWatcher = sbar.add("item", {
   updates = true,
 })
 
+-- Modify this file with Visual Studio Code - at least vim does have problems with the icons
+-- copy "Icons" from the nerd fonts cheat sheet and replace icon and name accordingly below
 -- https://www.nerdfonts.com/cheat-sheet
 local spaceConfigs <const> = {
   ["1"] = { icon = "󱞁", name = "Notes" },

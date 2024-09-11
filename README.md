@@ -16,7 +16,8 @@ The highly configurable top bar
 https://github.com/FelixKratz/SketchyBar
 
 - Sketchybar configuration  
-a really good lua scripted Sketchybar configuration
+a really good lua scripted Sketchybar configuration  
+(make sure to install lua: `brew install lua`)   
 https://github.com/bfpimentel/nixos.git
 
 - Required Font for Sketchybar  
