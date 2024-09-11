@@ -1,3 +1,5 @@
+
+
 behavior {
     theme "Kon"
     
@@ -9,8 +11,15 @@ behavior {
     
     quickSelect {
         activateOnAnyCharacter false
+        }
+    table {
+
+        defaults {
+
+            showHiddenFiles true
+
+            }
     }
-    
 }
 
 
@@ -18,14 +27,15 @@ keyBindings {
     "Cmd+O" "core.actions"
     "Shift+7" "core.lookup.here"
     "Ctrl+F" "core.lookup"
-    "H" "core.move.left"
-    "L" "core.move.right"
+    "H" "core.go.up"
+    "L" "core.open"
     "K" "core.move.up"
     "J" "core.move.down"
     "D" "core.delete"
     "Y" "core.clipboard.copy"
     "P" "core.clipboard.paste"
+    "Ctrl+U" "core.move.half.page.up"
+    "Ctrl+D" "core.move.half.page.down"
 
 
     }
-    
