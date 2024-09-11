@@ -24,7 +24,7 @@ https://github.com/bfpimentel/nixos.git
 `font-space-mono-nerd-font`
 
 - alacritty   
-A fast terminal that lets you disable decorations 
+A fast terminal that lets you disable decorations and activate blur/transparency
 https://github.com/alacritty/alacritty
 
 - marta  
