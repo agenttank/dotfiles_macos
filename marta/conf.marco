@@ -25,6 +25,7 @@ behavior {
 
 keyBindings {
     "Cmd+O" "core.actions"
+    "O" "core.go"
     "Shift+7" "core.lookup.here"
     "Ctrl+F" "core.lookup"
     "H" "core.go.up"
@@ -34,8 +35,19 @@ keyBindings {
     "D" "core.delete"
     "Y" "core.clipboard.copy"
     "P" "core.clipboard.paste"
+    "M" "core.move"
+    "C" "core.rename"
+    "R" "core.refresh"
+    "Shift+N" "core.new.folder"
+    "N" "core.new.file"
     "Ctrl+U" "core.move.half.page.up"
     "Ctrl+D" "core.move.half.page.down"
-
+    "I" "core.finder.showInfo"
+    "Shift+Y" "core.path"
+    "0" "core.hierarchy"
+    "1" "core.volumes"
+    "2" "core.favorites"
+    "Shift+2" "core.favorites.add"
+    "3" "core.recent"
 
     }
