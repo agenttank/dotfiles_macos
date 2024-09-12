@@ -39,6 +39,9 @@ Great alternative to Finder which allows vim-style bindings. I "disable" the sec
 
 `ln -s ~/.config/marta/conf.marco "~/Library/Application Support/org.yanex.marta/conf.marco"`
 
+Change file browser to marta (not sure if it works yet though)  
+`defaults write -g NSFileViewer -string org.yanex.marta`
+
 - borders  
 see what window is in focus at the moment - it makes a colored border appear
 https://github.com/FelixKratz/JankyBorders
@@ -69,6 +72,16 @@ I also changed a few settings in MacOS because the defaults interfere with this 
 ### make Dock and the native MacOS bar auto-hide  
 Desktop & Dock - Autohide Dock can be here somewhere  
 Control Center - Enable menu bar autohide here  
+
+Hide Dock via cli:  
+`defaults write com.apple.dock autohide -bool true && killall Dock`  
+
+Make it only appear if you float over it with the mouse for 10 seconds (use 4 fingers up gesture to make it appear)  
+`defaults write com.apple.dock autohide-delay -float 10000 && killall Dock`
+
+### disable Dock bouncing of apps
+`defaults write com.apple.dock no-bouncing -bool TRUE && killall Dock`  
+
 
 ### disable desktop icons
 having desktop icons is not very user-friendly together with tiling window managers and, be honest, it is cluttered most of the time anyways so it is recommended to disable them in "Desktop & Dock"  
