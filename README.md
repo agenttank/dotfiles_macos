@@ -1,19 +1,24 @@
 # my macOS dotfiles
 
 ## Screenshots
+### Terminal (Alacritty)
 <p align="center">
   <img src="rice.png" />
 <br>
 <br>
+### Browser (Qutebrowser)
   <img src="qutebrowser.png" />
 <br>
 <br>
+### AltBrowser (Edge)
   <img src="edge.png" />
 <br>
 <br>
+### Music (Spotify)
   <img src="spotify.png" />
 <br>
 <br>
+### Secrets (Bitwarden)
   <img src="bitwarden.png" />
 </p>
 
