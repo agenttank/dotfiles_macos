@@ -3,9 +3,17 @@
 ## Screenshots
 <p align="center">
   <img src="rice.png" />
+<br>
+<br>
   <img src="qutebrowser.png" />
+<br>
+<br>
   <img src="edge.png" />
+<br>
+<br>
   <img src="spotify.png" />
+<br>
+<br>
   <img src="bitwarden.png" />
 </p>
 
