@@ -1,8 +1,12 @@
 # my macOS dotfiles
 
-## Screenshot
+## Screenshots
 <p align="center">
   <img src="rice.png" />
+  <img src="qutebrowser.png" />
+  <img src="edge.png" />
+  <img src="spotify.png" />
+  <img src="bitwarden.png" />
 </p>
 
 ## really great applications that I use
@@ -49,6 +53,10 @@ https://github.com/FelixKratz/JankyBorders
 - brew packages  
 see `brew.txt`
 
+- spicetify  
+allows to change the theme of Spotify - not yet happy with the theme  
+`spicetify config current_theme Dribbblish color_scheme catppuccin-mocha`  
+
 - Wallpaper  
 https://www.reddit.com/r/wallpapers/  
 https://www.reddit.com/r/wallpapers/comments/1eibln5/abstract_circle_3840x2160/
@@ -62,7 +70,7 @@ oh-my-zsh
 - Browser  
 qutebrowser - A great browser that lets you browse the internet via keyboard/vim controls
 https://qutebrowser.com/  
-qutebrowser theme  
+qutebrowser theme - not yet happy with the theme 
 https://github.com/gicrisf/qute-city-lights  
 
 ## MacOS settings
