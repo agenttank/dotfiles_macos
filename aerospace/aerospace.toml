@@ -4,7 +4,7 @@ start-at-login = true
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFCBC2B1 inactive_color=0x33434c5e width=4.0',
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFEBBF83 inactive_color=0x33434c5e width=4.0',
      'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
