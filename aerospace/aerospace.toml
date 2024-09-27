@@ -36,15 +36,13 @@ default-root-container-orientation = 'auto'
 key-mapping.preset = 'qwerty'
 
 [gaps]
-inner.horizontal = 10
-inner.vertical =   10
+#outer.bottom numbers have to match presentation.sh variables. built-in retina display is excluded from presentation mode, so this only works on external monitors.
+outer.bottom =        [{monitor.'^built-in retina display$' = 10 }, 10]
+outer.top =        [{monitor.'^built-in retina display$' = 20 }, 52]
 outer.left =       13
 outer.right =      13
-outer.bottom =        [{monitor.'^built-in retina display$' = 10 }, 10]
-#outer.bottom =     300
-#outer.top =        50
-outer.top =        [{monitor.'^built-in retina display$' = 20 }, 52]
-#outer.top =        [{monitor.'^built-in retina display$' = 20 }, 250]
+inner.horizontal = 10
+inner.vertical =   10
 
 [exec]                   # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true  # If you don't touch "exec" section,
