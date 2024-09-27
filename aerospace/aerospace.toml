@@ -4,8 +4,8 @@ start-at-login = true
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFEBBF83 inactive_color=0x33434c5e width=4.0',
-     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xCFEBBF83 inactive_color=0x33434c5e width=4.0'
+#     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
 exec-on-workspace-change = [
@@ -41,8 +41,10 @@ inner.vertical =   10
 outer.left =       13
 outer.right =      13
 outer.bottom =     10
+#outer.bottom =     300
 #outer.top =        50
 outer.top =        [{monitor.'^built-in retina display$' = 20 }, 52]
+#outer.top =        [{monitor.'^built-in retina display$' = 20 }, 250]
 
 [exec]                   # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true  # If you don't touch "exec" section,
@@ -148,6 +150,18 @@ esc = [
 ]
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+b = [
+   'exec-and-forget ~/.config/aerospace/presentation.sh on',
+   'exec-and-forget sketchybar --bar height=0',
+   'exec-and-forget sketchybar --trigger hide_message',
+   'mode main'
+]
+shift-b = [
+   'exec-and-forget ~/.config/aerospace/presentation.sh off',
+   'exec-and-forget sketchybar --bar height=36',
+   'exec-and-forget sketchybar --trigger hide_message',
+   'mode main'
+]
 
 backspace = ['close-all-windows-but-current', 'mode main']
 
