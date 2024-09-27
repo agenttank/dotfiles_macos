@@ -16,7 +16,7 @@ blur = true
 [font]
 normal.family = "Menlo"
 
-size = 18
+size=18
 
 
 #theme 
