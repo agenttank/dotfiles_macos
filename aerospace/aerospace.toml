@@ -40,10 +40,10 @@ inner.horizontal = 10
 inner.vertical =   10
 outer.left =       13
 outer.right =      13
-outer.bottom =     10
+outer.bottom = 300
 #outer.bottom =     300
 #outer.top =        50
-outer.top =        [{monitor.'^built-in retina display$' = 20 }, 52]
+outer.top =        [{monitor.'^built-in retina display$' = 20 }, 300]
 #outer.top =        [{monitor.'^built-in retina display$' = 20 }, 250]
 
 [exec]                   # Again, you don't need to copy all config sections to your config.
@@ -150,16 +150,20 @@ esc = [
 ]
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+
+
 b = [
    'exec-and-forget ~/.config/aerospace/presentation.sh on',
    'exec-and-forget sketchybar --bar height=0',
    'exec-and-forget sketchybar --trigger hide_message',
+   'reload-config',
    'mode main'
 ]
 shift-b = [
    'exec-and-forget ~/.config/aerospace/presentation.sh off',
    'exec-and-forget sketchybar --bar height=36',
    'exec-and-forget sketchybar --trigger hide_message',
+   'reload-config',
    'mode main'
 ]
 
