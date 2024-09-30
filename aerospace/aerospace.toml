@@ -56,6 +56,9 @@ cmd-r = [
   'exec-and-forget sketchybar --trigger send_message MESSAGE="RESIZE MODE" HOLD="true"'
 ]
 
+cmd-keypadMinus = 'resize smart -70'
+cmd-keypadPlus = 'resize smart +70'
+
 cmd-g = 'mode join'
 cmd-q = [
   'close --quit-if-last-window'
@@ -166,8 +169,12 @@ shift-b = [
 backspace = ['close-all-windows-but-current', 'mode main']
 
 [mode.resize.binding]
-h = 'resize smart -70'
-l = 'resize smart +70'
+keypadMinus = 'resize smart -70'
+keypadPlus = 'resize smart +70'
+h = ['resize width -64']
+j = ['resize height -64']
+k = ['resize height +64']
+l = ['resize width +64']
 esc = [
   'mode main',
   'exec-and-forget sketchybar --trigger hide_message'
