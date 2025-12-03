@@ -1,3 +1,6 @@
+config-version = 2
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "T"]
+
 # AEROSPACE CONFIG
 #https://github.com/edunfelt/base16-rose-pine-scheme/blob/main/assets/palette.png
 start-at-login = true
@@ -5,15 +8,15 @@ start-at-login = true
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFFFBE69 inactive_color=0xFF007692 width=8.0'
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFB58900 inactive_color=0xFF268BD2 width=8.0'
 #     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
-]
+#exec-on-workspace-change = [
+#  '/bin/bash',
+#  '-c',
+#  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+#]
 
 on-focused-monitor-changed = [
   'move-mouse monitor-lazy-center'
@@ -21,7 +24,7 @@ on-focused-monitor-changed = [
 
 on-focus-changed = [
   'move-mouse window-lazy-center',
-  'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
+#  'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
   'exec-and-forget sketchybar --trigger update_windows'
 ]
 
@@ -83,8 +86,8 @@ cmd-w = []
 
 # All possible modifiers: cmd, alt, ctrl, shift
 
-#cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
-cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Ghostty.app'
+cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
+#cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Ghostty.app'
 #cmd-m = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Marta.app'
 
 cmd-shift-f = 'macos-native-fullscreen'
@@ -110,6 +113,7 @@ cmd-shift-left = 'move left'
 cmd-shift-down = 'move down'
 cmd-shift-up = 'move up'
 cmd-shift-right = 'move right'
+
 
 #cmd-1 = 'summon-workspace 1'  # Notes
 cmd-1 = 'workspace --auto-back-and-forth 1'  # Notes
@@ -202,6 +206,9 @@ j = ['join-with down', 'mode main', 'exec-and-forget sketchybar --trigger hide_m
 k = ['join-with up', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
 l = ['join-with right', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
 cmd-h = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+cmd-j = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+cmd-k = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
+cmd-l = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
 cmd-alt-h = ['join-with left', 'mode main', 'exec-and-forget sketchybar --trigger hide_message']
 esc = [
   'mode main',
@@ -252,5 +259,8 @@ run = ['move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-id = 'org.jkiss.dbeaver.core.product'              
-run = ['move-node-to-workspace 6']  
+run = ['move-node-to-workspace 5']  
 
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari.WebApp.1C17EE7D-3D12-44CB-A229-86ED6B20A4D1'              
+run = ['move-node-to-workspace 6']  

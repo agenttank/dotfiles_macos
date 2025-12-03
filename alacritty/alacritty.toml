@@ -1,3 +1,9 @@
+[general]
+ipc_socket=false
+import = [
+    "~/.config/alacritty/themes/themes/solarized_osaka.toml"
+]
+
 [env]
 TERM = "xterm-256color"
 
@@ -9,7 +15,7 @@ decorations = "Buttonless"
 
 
 #opacity = 0.30
-#opacity = 0.4
+opacity = 1
 #opacity = 0.5
 
 blur = true
@@ -86,77 +92,3 @@ size=18
 
 # Colors section of "Alacritty - TOML configuration file format"
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
-
-[colors.primary]
-foreground = "#e0def4"
-background = "#232136"
-dim_foreground = "#908caa"
-bright_foreground = "#e0def4"
-
-[colors.cursor]
-text = "#e0def4"
-cursor = "#56526e"
-
-[colors.vi_mode_cursor]
-text = "#e0def4"
-cursor = "#56526e"
-
-[colors.search.matches]
-foreground = "#908caa"
-background = "#393552"
-
-[colors.search.focused_match]
-foreground = "#232136"
-background = "#ea9a97"
-
-[colors.hints.start]
-foreground = "#908caa"
-background = "#2a273f"
-
-[colors.hints.end]
-foreground = "#6e6a86"
-background = "#2a273f"
-
-[colors.line_indicator]
-foreground = "None"
-background = "None"
-
-[colors.footer_bar]
-foreground = "#e0def4"
-background = "#2a273f"
-
-[colors.selection]
-text = "#e0def4"
-background = "#44415a"
-
-[colors.normal]
-black = "#393552"
-red = "#eb6f92"
-green = "#3e8fb0"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ea9a97"
-white = "#e0def4"
-
-[colors.bright]
-black = "#6e6a86"
-red = "#eb6f92"
-green = "#3e8fb0"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ea9a97"
-white = "#e0def4"
-
-[colors.dim]
-black = "#6e6a86"
-red = "#eb6f92"
-green = "#3e8fb0"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ea9a97"
-white = "#e0def4"
-
-
