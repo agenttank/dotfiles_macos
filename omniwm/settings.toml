@@ -52,13 +52,13 @@ hyperTrigger = "Command"
 ipcEnabled = false
 leaderKey = "Hyper+Space"
 preventSleepEnabled = false
-sequenceTimeoutMilliseconds = 800
+sequenceTimeoutMilliseconds = 500
 updateChecksEnabled = true
 
 [gestures]
 fingerCount = 3
 invertDirection = true
-mouseResizeModifierKey = "option"
+mouseResizeModifierKey = "command"
 scrollEnabled = true
 scrollModifierKey = "optionShift"
 scrollSensitivity = 5.0
@@ -74,7 +74,7 @@ centerFocusedColumn = "onOverflow"
 columnWidthPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
 defaultColumnWidth = 0.5
 infiniteLoop = false
-maxVisibleColumns = 2
+maxVisibleColumns = 3
 singleWindowAspectRatio = "16:9"
 
 [quakeTerminal]
@@ -193,9 +193,22 @@ minHeight = 320.0
 minWidth = 660.0
 
 [[appRules]]
+bundleId = "com.microsoft.Outlook"
+id = "6D9FEF8A-AC1B-4630-9792-0C1B9B1E2F43"
+layout = "tile"
+titleSubstring = "outlook"
+
+[[appRules]]
 bundleId = "org.qutebrowser.qutebrowser"
 id = "6D9FEF8A-AC1B-4630-9792-0C0B9B1E2F43"
 layout = "tile"
+titleSubstring = "qutebrowser"
+
+[[appRules]]
+bundleId = "com.bitwarden.desktop"
+id = "6D9FEF8A-AC1B-4630-9792-0CBA9B1E2F43"
+layout = "tile"
+titleSubstring = "bitwarden"
 
 [[appRules]]
 assignToWorkspace = "1"
@@ -400,7 +413,7 @@ binding = "Unassigned"
 id = "moveColumnToWorkspace.8"
 
 [[hotkeys]]
-binding = "Hyper+Shift+H"
+binding = "Unassigned"
 id = "move.left"
 
 [[hotkeys]]
@@ -412,7 +425,7 @@ binding = "Hyper+Shift+K"
 id = "move.up"
 
 [[hotkeys]]
-binding = "Hyper+Shift+L"
+binding = "Unassigned"
 id = "move.right"
 
 [[hotkeys]]
@@ -440,11 +453,11 @@ binding = "Unassigned"
 id = "consumeOrExpelWindowRight"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Hyper+Comma"
 id = "consumeWindowIntoColumn"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Hyper+Period"
 id = "expelWindowFromColumn"
 
 [[hotkeys]]
@@ -460,31 +473,31 @@ binding = "Unassigned"
 id = "focusMonitorLast"
 
 [[hotkeys]]
-binding = "Hyper+F"
+binding = "Unassigned"
 id = "toggleFullscreen"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Hyper+Shift+F"
 id = "toggleNativeFullscreen"
 
 [[hotkeys]]
-binding = "Hyper+Control+Shift+Left Arrow"
+binding = "Hyper+Shift+H"
 id = "moveColumn.left"
 
 [[hotkeys]]
-binding = "Hyper+Control+Shift+Right Arrow"
+binding = "Hyper+Shift+L"
 id = "moveColumn.right"
 
 [[hotkeys]]
-binding = "Hyper+Control+Home"
+binding = "Unassigned"
 id = "moveColumnToFirst"
 
 [[hotkeys]]
-binding = "Hyper+Control+End"
+binding = "Unassigned"
 id = "moveColumnToLast"
 
 [[hotkeys]]
-binding = "Hyper+T"
+binding = "Unassigned"
 id = "toggleColumnTabbed"
 
 [[hotkeys]]
@@ -628,7 +641,7 @@ binding = "Unassigned"
 id = "cycleWindowHeightBackward"
 
 [[hotkeys]]
-binding = "Hyper+Shift+F"
+binding = "Hyper+F"
 id = "toggleColumnFullWidth"
 
 [[hotkeys]]
