@@ -8,7 +8,7 @@ start-at-login = true
 after-login-command = []
 
 after-startup-command = [
-     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFB58900 inactive_color=0xFF268BD2 width=8.0'
+     'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xFFF19A78 inactive_color=0xBB003F5E width=8.0'
 #     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
 ]
 
@@ -41,12 +41,12 @@ key-mapping.preset = 'qwerty'
 
 [gaps]
 #outer.bottom numbers have to match presentation.sh variables. built-in retina display is excluded from presentation mode, so this only works on external monitors.
-outer.bottom =        [{monitor.'^built-in retina display$' = 20 }, 40]
-outer.top =        [{monitor.'^built-in retina display$' = 30 }, 82]
-outer.left =       40
-outer.right =      40
-inner.horizontal = 40
-inner.vertical =   40
+outer.bottom =        [{monitor.'^built-in retina display$' = 20 }, 20]
+outer.top =        [{monitor.'^built-in retina display$' = 3 }, 5]
+outer.left =       30
+outer.right =      30
+inner.horizontal = 30
+inner.vertical =   30
 
 [exec]                   # Again, you don't need to copy all config sections to your config.
 inherit-env-vars = true  # If you don't touch "exec" section,
@@ -86,7 +86,7 @@ cmd-w = []
 
 # All possible modifiers: cmd, alt, ctrl, shift
 
-cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
+#cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Alacritty.app'
 #cmd-enter = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Ghostty.app'
 #cmd-m = 'exec-and-forget open -n /Volumes/Macintosh\ HD/Applications/Marta.app'
 
@@ -169,8 +169,14 @@ s = [
    'mode main'
 ] 
 
+#b = [
+#   'exec-and-forget ~/.config/aerospace/presentation.sh on',
+#   'exec-and-forget sketchybar --bar height=0',
+#   'exec-and-forget sketchybar --trigger hide_message',
+#   'mode main'
+#]
 b = [
-   'exec-and-forget ~/.config/aerospace/presentation.sh on',
+   'exec-and-forget ~/.config/aerospace/widetoggle.sh on',
    'exec-and-forget sketchybar --bar height=0',
    'exec-and-forget sketchybar --trigger hide_message',
    'mode main'
