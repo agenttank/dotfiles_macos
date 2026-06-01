@@ -1,0 +1,9 @@
+id = "C85EE496-1D8D-4A94-827B-4275A80FF39E"
+order = 1
+
+[match]
+bundleId = "com.eltima.cmd1.pro.mas"
+
+[effect]
+minWidth = 950
+minHeight = 550

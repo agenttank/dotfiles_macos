@@ -1,0 +1,9 @@
+id = "F77B82BA-2AE5-45D0-8DDF-EEC6F7D1ACB2"
+order = 6
+
+[match]
+bundleId = "app.zen-browser.zen"
+
+[effect]
+minWidth = 500
+minHeight = 495

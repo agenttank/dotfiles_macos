@@ -1,0 +1,9 @@
+id = "10F6C249-1ED7-474C-94E7-9EEA2879E751"
+order = 9
+
+[match]
+bundleId = "com.spotify.client"
+
+[effect]
+minWidth = 800
+minHeight = 600

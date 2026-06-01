@@ -1,0 +1,9 @@
+id = "CB2DC40A-B096-49F6-81DC-4A8690BA6249"
+order = 0
+
+[match]
+bundleId = "com.openai.codex"
+
+[effect]
+minWidth = 800
+minHeight = 600

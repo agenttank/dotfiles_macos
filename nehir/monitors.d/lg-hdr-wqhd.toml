@@ -1,0 +1,7 @@
+[match]
+name = "LG HDR WQHD"
+displayId = 3
+
+[niri]
+maxVisibleColumns = 3
+centerFocusedColumn = "onOverflow"

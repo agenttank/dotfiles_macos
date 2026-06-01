@@ -1,0 +1,9 @@
+id = "A32D878A-3977-48D1-A163-C0798E16886E"
+order = 2
+
+[match]
+bundleId = "com.google.Chrome"
+
+[effect]
+minWidth = 500
+minHeight = 375

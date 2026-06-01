@@ -1,0 +1,9 @@
+id = "FB4CC30F-FDBB-496D-BD60-789508874FC1"
+order = 11
+
+[match]
+bundleId = "com.microsoft.Outlook"
+
+[effect]
+minWidth = 930
+minHeight = 650

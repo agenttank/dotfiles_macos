@@ -1,0 +1,35 @@
+[[workspace]]
+name = "1"
+monitor = "main"
+
+[[workspace]]
+name = "2"
+monitor = "main"
+
+[[workspace]]
+name = "3"
+monitor = "main"
+
+[[workspace]]
+name = "4"
+monitor = "main"
+
+[[workspace]]
+name = "5"
+monitor = "main"
+
+[[workspace]]
+name = "6"
+monitor = "main"
+
+[[workspace]]
+name = "7"
+monitor = "main"
+
+[[workspace]]
+name = "8"
+monitor = "main"
+
+[[workspace]]
+name = "9"
+monitor = "main"

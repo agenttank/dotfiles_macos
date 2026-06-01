@@ -1,0 +1,9 @@
+id = "F29EC83C-DCE8-418D-BE3A-09E443E54A96"
+order = 8
+
+[match]
+bundleId = "company.thebrowser.dia"
+
+[effect]
+minWidth = 500
+minHeight = 420

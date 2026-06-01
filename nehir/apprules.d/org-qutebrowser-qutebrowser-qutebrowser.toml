@@ -1,0 +1,11 @@
+id = "B32D878A-3977-48D1-A163-C0798E16886E"
+order = 3
+
+[match]
+bundleId = "org.qutebrowser.qutebrowser"
+titleSubstring = "qutebrowser"
+
+[effect]
+layout = "tile"
+minWidth = 500
+minHeight = 375
