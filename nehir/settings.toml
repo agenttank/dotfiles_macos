@@ -13,9 +13,9 @@ green = 1.0
 red = 0.08458520228437894
 
 [focus]
-followsMouse = false
+followsMouse = true
 followsWindowToMonitor = false
-moveMouseToFocusedWindow = false
+moveMouseToFocusedWindow = true
 
 [gaps]
 size = 16.0
@@ -27,14 +27,13 @@ right = 11.0
 top = 11.0
 
 [general]
-animationsEnabled = true
 hotkeysEnabled = true
 ipcEnabled = false
 preventSleepEnabled = false
 
 [gestures]
 fingerCount = 3
-invertDirection = true
+invertDirection = false
 mouseResizeModifierKey = "option"
 scrollEnabled = true
 scrollModifierKey = "optionShift"
@@ -49,15 +48,15 @@ monitorOrder = []
 [niri]
 alwaysCenterSingleColumn = true
 centerFocusedColumn = "onOverflow"
-columnWidthPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
-defaultColumnWidth = 0.33
+columnWidthPresets = [0.3333333333333333, 0.5, 0.666]
+defaultColumnWidth = 0.5
 infiniteLoop = false
 maxVisibleColumns = 3
 singleWindowAspectRatio = "16:9"
 
 [statusBar]
 showAppNames = false
-showWorkspaceName = false
+showWorkspaceName = true
 useWorkspaceId = false
 
 [workspaceBar]
@@ -66,12 +65,13 @@ deduplicateAppIcons = false
 enabled = true
 height = 32.0
 hideEmptyWorkspaces = false
-labelFontSize = 16.0
+labelFontSize = 12.0
 notchAware = true
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
 showFloatingWindows = true
 showLabels = true
+showTraceButton = false
 windowLevel = "popup"
 xOffset = 0.0
 yOffset = 0.0

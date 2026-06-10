@@ -1,0 +1,10 @@
+[match]
+name = "Built-in Retina Display"
+
+[niri]
+maxVisibleColumns = 2
+singleWindowAspectRatio = "16:9"
+
+[bar]
+enabled = false
+notchAware = false
