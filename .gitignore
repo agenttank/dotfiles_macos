@@ -1,1 +1,6 @@
 openstack
+.pi/taskflows/
+**/__pycache__/
+*.pyc
+remote-fabric/.coverage
+remote-fabric/.test-state/

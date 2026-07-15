@@ -128,3 +128,7 @@ Read about it here: https://nikitabobko.github.io/AeroSpace/guide#a-note-on-disp
 
 Sketchybar might work with the option being disabled in the future.  
 https://github.com/FelixKratz/SketchyBar/issues/495  
+
+## Remote execution fabric
+
+The opt-in Orca/Pi remote execution layer lives in [`remote-fabric/`](remote-fabric/README.md). It keeps execution local by default and requires the documented rollout acceptance matrix before remote routing can become the default.

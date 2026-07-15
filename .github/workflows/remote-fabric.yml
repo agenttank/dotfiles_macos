@@ -1,0 +1,28 @@
+name: remote-fabric
+on:
+  pull_request:
+  push:
+    paths:
+      - 'remote-fabric/**'
+      - '.agents/skills/remote-fabric/**'
+      - '.github/workflows/remote-fabric.yml'
+jobs:
+  python:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.9', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '${{ matrix.python }}' }
+      - run: make -C remote-fabric check test
+  powershell:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: pwsh
+        run: |
+          [void][scriptblock]::Create((Get-Content -Raw remote-fabric/bootstrap/windows-wsl.ps1))
+          if ((Get-Content -Raw remote-fabric/bootstrap/windows-wsl.ps1) -notmatch "wsl.exe") { throw "missing wsl.exe contract" }

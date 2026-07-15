@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "hosts": [
+    {
+      "id": "local",
+      "enabled": true,
+      "platform": "macos",
+      "transport": "local",
+      "roles": ["control", "orca", "compute"],
+      "capabilities": ["orca", "pi", "build"],
+      "priority": 100,
+      "repo_root": "~/Developer",
+      "worktree_root": "~/orca/workspaces"
+    },
+    {
+      "id": "mac-mini",
+      "enabled": false,
+      "platform": "macos",
+      "transport": "ssh",
+      "ssh_alias": "orca-mac-mini",
+      "known_hosts_file": "~/.config/remote-fabric/known_hosts",
+      "host_key_fingerprint": "SHA256:REPLACE_WITH_PINNED_FINGERPRINT",
+      "command_path": ["/Users/thalysguimaraes/bin", "/Users/thalysguimaraes/.local/bin", "/opt/homebrew/bin", "/usr/local/bin", "/usr/bin", "/bin", "/usr/sbin", "/sbin"],
+      "roles": ["control", "orca", "compute"],
+      "capabilities": ["orca", "pi", "build"],
+      "priority": 10,
+      "runner_priorities": {"orca": 10, "pi": 50, "build": 50},
+      "repo_root": "~/Developer",
+      "worktree_root": "~/orca/workspaces"
+    },
+    {
+      "id": "windows-wsl",
+      "enabled": false,
+      "platform": "wsl",
+      "transport": "ssh-wsl",
+      "ssh_alias": "windows",
+      "wsl_distro": "Ubuntu",
+      "known_hosts_file": "~/.config/remote-fabric/known_hosts",
+      "host_key_fingerprint": "SHA256:REPLACE_WITH_PINNED_WINDOWS_FINGERPRINT",
+      "command_path": ["/home/thalys/.local/bin", "/usr/local/bin", "/usr/bin", "/bin", "/usr/sbin", "/sbin"],
+      "roles": ["compute"],
+      "capabilities": ["pi", "build"],
+      "priority": 20,
+      "runner_priorities": {"pi": 10, "build": 10},
+      "repo_root": "~/Developer",
+      "worktree_root": "~/orca/workspaces"
+    }
+  ]
+}

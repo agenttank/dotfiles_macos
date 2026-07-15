@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "repositories": [
+    {
+      "id": "dotfiles",
+      "origin": "git@github.com:example/dotfiles.git",
+      "canonical_path": "~/Developer/.remote-fabric/dotfiles.git",
+      "worktree_root": "~/orca/workspaces"
+    }
+  ]
+}
