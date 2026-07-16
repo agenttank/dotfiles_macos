@@ -57,7 +57,21 @@ remote-fabric/bootstrap/wsl-guest.sh validate
 pwsh -File remote-fabric/bootstrap/windows-wsl.ps1 -Distro Ubuntu -Plan
 ```
 
+On Windows, `-Apply` installs an S4U startup task that keeps the distro alive without an interactive login. `-LoopbackForwardPort 3456` additionally maintains a Windows-loopback-only portproxy to the current WSL address; use it only when the guest intentionally exposes the approved provider endpoint on that port.
+
 They do not install packages implicitly. `reconcile plan` is read-only; `apply` copies only manifest-owned files, records a generation, and is a no-op when hashes already match. `rollback` restores generation backups. Remote deployment should invoke these exact commands through the SSH transport after deploying a pinned Git release.
+
+## Pi through Meridian
+
+After Meridian is healthy on `127.0.0.1:3456`, install Pi's non-secret provider configuration and the required request-filter/profile-autoswitch extensions:
+
+```sh
+remote-fabric/bootstrap/pi-meridian.sh plan
+remote-fabric/bootstrap/pi-meridian.sh apply
+remote-fabric/bootstrap/pi-meridian.sh validate
+```
+
+The system-prompt filter is required for subscription-backed requests; without it Anthropic classifies Pi's stock prompt as a third-party app and charges extra usage. The autoswitch extension adds `x-meridian-profile` from fresh quota data and coordinates concurrent Pi processes through atomic local lease state. Credentials remain outside this repository and outside the script.
 
 ## Secret broker contract
 
