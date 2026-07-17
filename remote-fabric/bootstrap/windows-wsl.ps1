@@ -4,7 +4,8 @@ param(
   [Parameter(ParameterSetName = 'Plan')][switch]$Plan,
   [Parameter(ParameterSetName = 'Apply')][switch]$Apply,
   [Parameter(ParameterSetName = 'Validate')][switch]$Validate,
-  [ValidateRange(0, 65535)][int]$LoopbackForwardPort = 0
+  [ValidateRange(0, 65535)][int]$LoopbackForwardPort = 0,
+  [ValidatePattern('^[0-9A-Fa-f:.]+/[0-9]{1,3}$')][string]$LanRecoverySubnet = ''
 )
 $ErrorActionPreference = 'Stop'
 $wsl = (Get-Command wsl.exe -ErrorAction Stop).Source
@@ -18,6 +19,7 @@ if ($Plan) {
     distro = $Distro
     wslArgv = $args
     loopbackForwardPort = $LoopbackForwardPort
+    lanRecoverySubnet = $LanRecoverySubnet
   } | ConvertTo-Json -Compress
   exit 0
 }
@@ -35,22 +37,25 @@ param(
   [ValidateRange(0, 65535)][int]$LoopbackForwardPort = 0
 )
 $ErrorActionPreference = 'Stop'
-$process = Start-Process -FilePath $WslPath -ArgumentList @('--distribution', $Distro, '--exec', '/bin/sleep', 'infinity') -PassThru -WindowStyle Hidden
-try {
-  if ($LoopbackForwardPort -gt 0) {
-    $guestAddress = $null
-    for ($attempt = 0; $attempt -lt 30 -and -not $guestAddress; $attempt++) {
-      Start-Sleep -Milliseconds 500
-      $addresses = (& $WslPath --distribution $Distro --exec hostname -I) -replace [char]0, ''
-      $guestAddress = ([regex]::Matches($addresses, '(?<![0-9])(?:[0-9]{1,3}\.){3}[0-9]{1,3}(?![0-9])') | Select-Object -First 1).Value
+while ($true) {
+  $process = Start-Process -FilePath $WslPath -ArgumentList @('--distribution', $Distro, '--exec', '/bin/sleep', 'infinity') -PassThru -WindowStyle Hidden
+  try {
+    if ($LoopbackForwardPort -gt 0) {
+      $guestAddress = $null
+      for ($attempt = 0; $attempt -lt 30 -and -not $guestAddress; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $addresses = (& $WslPath --distribution $Distro --exec hostname -I) -replace [char]0, ''
+        $guestAddress = ([regex]::Matches($addresses, '(?<![0-9])(?:[0-9]{1,3}\.){3}[0-9]{1,3}(?![0-9])') | Select-Object -First 1).Value
+      }
+      if (-not $guestAddress) { throw "Could not determine the WSL guest address" }
+      & netsh.exe interface portproxy delete v4tov4 listenaddress=127.0.0.1 listenport=$LoopbackForwardPort | Out-Null
+      & netsh.exe interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=$LoopbackForwardPort connectaddress=$guestAddress connectport=$LoopbackForwardPort | Out-Null
     }
-    if (-not $guestAddress) { throw "Could not determine the WSL guest address" }
-    & netsh.exe interface portproxy delete v4tov4 listenaddress=127.0.0.1 listenport=$LoopbackForwardPort | Out-Null
-    & netsh.exe interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=$LoopbackForwardPort connectaddress=$guestAddress connectport=$LoopbackForwardPort | Out-Null
+    Wait-Process -Id $process.Id
+  } finally {
+    if (-not $process.HasExited) { Stop-Process -Id $process.Id -Force }
   }
-  Wait-Process -Id $process.Id
-} finally {
-  if (-not $process.HasExited) { Stop-Process -Id $process.Id -Force }
+  Start-Sleep -Seconds 2
 }
 '@ | Set-Content -Path $keepalivePath -Encoding UTF8
 
@@ -63,16 +68,25 @@ try {
     '-LoopbackForwardPort', $LoopbackForwardPort
   ) -join ' '
   $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $actionArguments
-  $trigger = New-ScheduledTaskTrigger -AtStartup
+  $startupTrigger = New-ScheduledTaskTrigger -AtStartup
+  $watchdogTrigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes 1) -RepetitionDuration (New-TimeSpan -Days 3650)
+  $settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable
   $principalId = (& whoami).Trim()
   $principal = New-ScheduledTaskPrincipal -UserId $principalId -LogonType S4U -RunLevel Highest
-  Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Principal $principal -Force | Out-Null
+  Register-ScheduledTask -TaskName $taskName -Action $action -Trigger @($startupTrigger, $watchdogTrigger) -Settings $settings -Principal $principal -Force | Out-Null
   Start-ScheduledTask -TaskName $taskName
+
+  if ($LanRecoverySubnet) {
+    $firewallName = 'RemoteFabric-SSH-LAN-Recovery'
+    Get-NetFirewallRule -DisplayName $firewallName -ErrorAction SilentlyContinue | Remove-NetFirewallRule
+    New-NetFirewallRule -DisplayName $firewallName -Direction Inbound -Action Allow -Protocol TCP -LocalPort 22 -RemoteAddress $LanRecoverySubnet -Profile Any | Out-Null
+  }
 }
 [pscustomobject]@{
   schema = 1
   action = $(if ($Apply) {'apply'} else {'validate'})
   distro = $Distro
   loopbackForwardPort = $LoopbackForwardPort
+  lanRecoverySubnet = $LanRecoverySubnet
   ready = $true
 } | ConvertTo-Json -Compress

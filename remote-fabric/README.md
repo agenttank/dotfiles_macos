@@ -57,7 +57,7 @@ remote-fabric/bootstrap/wsl-guest.sh validate
 pwsh -File remote-fabric/bootstrap/windows-wsl.ps1 -Distro Ubuntu -Plan
 ```
 
-On Windows, `-Apply` installs an S4U startup task that keeps the distro alive without an interactive login. `-LoopbackForwardPort 3456` additionally maintains a Windows-loopback-only portproxy to the current WSL address; use it only when the guest intentionally exposes the approved provider endpoint on that port.
+On Windows, `-Apply` installs an S4U startup task plus a one-minute watchdog trigger that keeps or recovers the distro without an interactive login. `-LoopbackForwardPort 3456` additionally maintains a Windows-loopback-only portproxy to the current WSL address; use it only when the guest intentionally exposes the approved provider endpoint on that port. `-LanRecoverySubnet 192.168.1.0/24` optionally installs a source-restricted LAN SSH recovery rule so a trusted peer can restore Tailscale without exposing SSH beyond that subnet.
 
 They do not install packages implicitly. `reconcile plan` is read-only; `apply` copies only manifest-owned files, records a generation, and is a no-op when hashes already match. `rollback` restores generation backups. Remote deployment should invoke these exact commands through the SSH transport after deploying a pinned Git release.
 
