@@ -24,6 +24,19 @@ remote-fabric/bin/fabric --json session attach --work-id TG-55 --dry-run
 
 Global `--json` and `--inventory` options precede the subcommand. `--dry-run` returns exact launch/attach argument arrays without executing them.
 
+## Staged rollout during soak
+
+Remote work may start explicitly before the soak completes while the MacBook keeps the local repository and fallback path:
+
+```sh
+fabric session start --runner orca --repo <repo> --ref <pushed-sha> --work-id <id> --remote
+fabric session start --runner pi    --repo <repo> --ref <pushed-sha> --work-id <id> --remote
+fabric session start --runner build --repo <repo> --ref <pushed-sha> --work-id <id> --remote
+fabric session attach --work-id <id>
+```
+
+Inventory priorities route Orca to the Mac mini and Pi/build to Windows WSL. Use clean, pushed commits or Git bundles as checkpoints because uncommitted remote edits are not present in the MacBook clone. Keep `remote_default=false`; use `--local` explicitly whenever the remote path is unavailable.
+
 ## Commands
 
 ```text

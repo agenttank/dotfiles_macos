@@ -93,6 +93,11 @@ class AtomicConcurrencyTests(Isolated):
 
 
 class SessionTests(Isolated):
+    def test_orca_runner_keeps_session_alive_after_runtime_start(self):
+        command = sessions._runner_command({"runner": "orca"})
+        self.assertEqual(command[:2], ["sh", "-lc"])
+        self.assertIn("orca open && exec", command[2])
+
     def test_same_work_converges_to_one_receipt(self):
         data = {"schema": 1, "hosts": [{"id": "local", "platform": "macos", "transport": "local", "roles": ["compute"], "capabilities": ["pi"], "priority": 1}]}
         results, errors = [], []

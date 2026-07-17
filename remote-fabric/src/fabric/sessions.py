@@ -29,7 +29,7 @@ def receipt_path(session_id: str) -> Path:
 def _runner_command(meta: dict[str, Any], worktree: Optional[str] = None) -> list[str]:
     runner = meta["runner"]
     if runner == "orca":
-        command = ["orca", "open"]
+        command = ["sh", "-lc", 'orca open && exec "${SHELL:-/bin/sh}"']
     elif runner == "pi":
         command = ["pi"]
     elif runner == "build":
