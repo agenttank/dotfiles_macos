@@ -1,18 +1,22 @@
+monitorBarOverrides = []
 monitorDwindleOverrides = []
+monitorGapOverrides = []
+monitorNiriOverrides = []
 monitorOrientationOverrides = []
+monitorRoutingOverrides = []
 
 [appearance]
 mode = "dark"
 
 [borders]
 enabled = true
-width = 4.0
+width = 5.0
 
 [borders.color]
 alpha = 1.0
-blue = 0.37855082750320435
-green = 0.3267984092235565
-red = 0.7783046364784241
+blue = 0.979300037944676
+green = 1.0
+red = 0.08458520228437894
 
 [clipboard]
 historyEnabled = false
@@ -29,23 +33,23 @@ splitWidthMultiplier = 1.0
 useGlobalGaps = true
 
 [focus]
-raiseOnMouseFocus = true
-crossesMonitorAtEdge = true
+crossesMonitorAtEdge = false
 followsMouse = false
 followsWindowToMonitor = false
 lockModifier = "off"
-moveCrossesMonitorAtEdge = true
+moveCrossesMonitorAtEdge = false
 moveMouseToFocusedWindow = false
+raiseOnMouseFocus = false
 
 [gaps]
 fullscreenUsesOuterGaps = false
-size = 26.0
+size = 16.0
 
 [gaps.outer]
-bottom = 12.0
-left = 12.0
-right = 12.0
-top = 12.0
+bottom = 0.0
+left = 0.0
+right = 0.0
+top = 0.0
 
 [general]
 animationsEnabled = true
@@ -59,12 +63,12 @@ updateChecksEnabled = true
 
 [gestures]
 fingerCount = 3
-invertDirection = false
+invertDirection = true
 mouseMoveModifierKey = "option"
-mouseResizeModifierKey = "command"
+mouseResizeModifierKey = "option"
 scrollEnabled = true
 scrollModifierKey = "optionShift"
-scrollSensitivity = 1.7000000000000002
+scrollSensitivity = 5.0
 trackpadScrollStyle = "snap"
 workspaceSwipeAxis = "vertical"
 workspaceSwipeEnabled = false
@@ -81,9 +85,10 @@ enabled = true
 margin = 1
 
 [niri]
-alwaysCenterSingleColumn = true
-centerFocusedColumn = "onOverflow"
+alwaysCenterSingleColumn = false
+centerFocusedColumn = "never"
 containerPrimarySpanPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
+defaultContainerPrimarySpan = 0.5
 infiniteLoop = false
 singleWindowFit = "fill"
 visibleContainerCount = 2
@@ -93,9 +98,9 @@ zoom = 1.0
 
 [overview.backdrop]
 alpha = 1.0
-blue = 0.40795743465423584
-green = 0.34912315011024475
-red = 0.1804136335849762
+blue = 0.08
+green = 0.05
+red = 0.05
 
 [overview.windowBorders]
 
@@ -122,7 +127,7 @@ animationDuration = 0.2
 autoHide = false
 backgroundBlurRadius = 0
 backgroundEffect = "standardBlur"
-enabled = false
+enabled = true
 heightPercent = 50.0
 monitorMode = "focusedWindow"
 opacity = 1.0
@@ -130,19 +135,19 @@ position = "center"
 widthPercent = 50.0
 
 [routing]
-mode = "custom"
+mode = "macOS"
 
 [statusBar]
-showAppNames = true
-showWorkspaceName = true
+showAppNames = false
+showWorkspaceName = false
 useWorkspaceId = false
 
 [workspaceBar]
-backgroundOpacity = 0.05
+backgroundOpacity = 0.1
 deduplicateAppIcons = false
 enabled = true
 excludedBundleIDs = []
-height = 34.0
+height = 24.0
 hideEmptyWorkspaces = false
 notchActiveZoneWidth = 180.0
 notchMode = "moveBelowMenuBar"
@@ -153,7 +158,7 @@ revealModifier = "off"
 showFloatingWindows = false
 showLabels = true
 systemStatsButton = false
-windowLevel = "normal"
+windowLevel = "popup"
 xOffset = 0.0
 yOffset = 0.0
 
@@ -237,86 +242,80 @@ id = "552FB77D-BF0E-4737-90A6-B5BC6986C579"
 minHeight = 320.0
 minWidth = 660.0
 
-[[appRules]]
-bundleId = "org.qutebrowser.qutebrowser"
-id = "6D9FEF8A-AC1B-4630-9792-0C0B9B1E2F43"
-layout = "tile"
-titleSubstring = "qutebrowser"
-
 [[hotkeys]]
-binding = "Command+1"
+binding = "Option+1"
 id = "switchWorkspace.0"
 
 [[hotkeys]]
-binding = "Shift+Command+1"
+binding = "Option+Shift+1"
 id = "moveToWorkspace.0"
 
 [[hotkeys]]
-binding = "Command+2"
+binding = "Option+2"
 id = "switchWorkspace.1"
 
 [[hotkeys]]
-binding = "Shift+Command+2"
+binding = "Option+Shift+2"
 id = "moveToWorkspace.1"
 
 [[hotkeys]]
-binding = "Command+3"
+binding = "Option+3"
 id = "switchWorkspace.2"
 
 [[hotkeys]]
-binding = "Shift+Command+3"
+binding = "Option+Shift+3"
 id = "moveToWorkspace.2"
 
 [[hotkeys]]
-binding = "Command+4"
+binding = "Option+4"
 id = "switchWorkspace.3"
 
 [[hotkeys]]
-binding = "Shift+Command+4"
+binding = "Option+Shift+4"
 id = "moveToWorkspace.3"
 
 [[hotkeys]]
-binding = "Command+5"
+binding = "Option+5"
 id = "switchWorkspace.4"
 
 [[hotkeys]]
-binding = "Shift+Command+5"
+binding = "Option+Shift+5"
 id = "moveToWorkspace.4"
 
 [[hotkeys]]
-binding = "Command+6"
+binding = "Option+6"
 id = "switchWorkspace.5"
 
 [[hotkeys]]
-binding = "Shift+Command+6"
+binding = "Option+Shift+6"
 id = "moveToWorkspace.5"
 
 [[hotkeys]]
-binding = "Command+7"
+binding = "Option+7"
 id = "switchWorkspace.6"
 
 [[hotkeys]]
-binding = "Shift+Command+7"
+binding = "Option+Shift+7"
 id = "moveToWorkspace.6"
 
 [[hotkeys]]
-binding = "Command+8"
+binding = "Option+8"
 id = "switchWorkspace.7"
 
 [[hotkeys]]
-binding = "Shift+Command+8"
+binding = "Option+Shift+8"
 id = "moveToWorkspace.7"
 
 [[hotkeys]]
-binding = "Command+9"
+binding = "Option+9"
 id = "switchWorkspace.8"
 
 [[hotkeys]]
-binding = "Shift+Command+9"
+binding = "Option+Shift+9"
 id = "moveToWorkspace.8"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Tab"
 id = "workspaceBackAndForth"
 
 [[hotkeys]]
@@ -328,23 +327,23 @@ binding = "Unassigned"
 id = "switchWorkspace.previous"
 
 [[hotkeys]]
-binding = "Command+H"
+binding = "Option+Left Arrow"
 id = "focus.left"
 
 [[hotkeys]]
-binding = "Command+J"
+binding = "Option+Down Arrow"
 id = "focus.down"
 
 [[hotkeys]]
-binding = "Command+K"
+binding = "Option+Up Arrow"
 id = "focus.up"
 
 [[hotkeys]]
-binding = "Command+L"
+binding = "Option+Right Arrow"
 id = "focus.right"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Tab"
 id = "focusPrevious"
 
 [[hotkeys]]
@@ -384,23 +383,23 @@ binding = "Unassigned"
 id = "centerColumn"
 
 [[hotkeys]]
-binding = "Shift+Command+C"
+binding = "Unassigned"
 id = "centerVisibleColumns"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Shift+Up Arrow"
 id = "moveWindowToWorkspaceUp"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Shift+Down Arrow"
 id = "moveWindowToWorkspaceDown"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Shift+Page Up"
 id = "moveColumnToWorkspaceUp"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Shift+Page Down"
 id = "moveColumnToWorkspaceDown"
 
 [[hotkeys]]
@@ -440,19 +439,19 @@ binding = "Unassigned"
 id = "moveColumnToWorkspace.8"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Shift+Left Arrow"
 id = "move.left"
 
 [[hotkeys]]
-binding = "Shift+Command+J"
+binding = "Option+Shift+Down Arrow"
 id = "move.down"
 
 [[hotkeys]]
-binding = "Shift+Command+K"
+binding = "Option+Shift+Up Arrow"
 id = "move.up"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Shift+Right Arrow"
 id = "move.right"
 
 [[hotkeys]]
@@ -472,15 +471,15 @@ binding = "Unassigned"
 id = "moveWindowUpOrToWorkspaceUp"
 
 [[hotkeys]]
-binding = "Command+Comma"
+binding = "Unassigned"
 id = "consumeWindowIntoColumn"
 
 [[hotkeys]]
-binding = "Command+Period"
+binding = "Unassigned"
 id = "expelWindowFromColumn"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Command+Tab"
 id = "focusMonitorNext"
 
 [[hotkeys]]
@@ -488,15 +487,15 @@ binding = "Unassigned"
 id = "focusMonitorPrevious"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Command+Grave"
 id = "focusMonitorLast"
 
 [[hotkeys]]
-binding = "Command+U"
+binding = "Unassigned"
 id = "moveWorkspaceToMonitor.left"
 
 [[hotkeys]]
-binding = "Command+P"
+binding = "Unassigned"
 id = "moveWorkspaceToMonitor.right"
 
 [[hotkeys]]
@@ -508,11 +507,11 @@ binding = "Unassigned"
 id = "moveWorkspaceToMonitor.down"
 
 [[hotkeys]]
-binding = "Shift+Command+U"
+binding = "Unassigned"
 id = "moveWindowToMonitor.left"
 
 [[hotkeys]]
-binding = "Shift+Command+P"
+binding = "Unassigned"
 id = "moveWindowToMonitor.right"
 
 [[hotkeys]]
@@ -524,19 +523,19 @@ binding = "Unassigned"
 id = "moveWindowToMonitor.down"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Return"
 id = "toggleFullscreen"
 
 [[hotkeys]]
-binding = "Shift+Command+F"
+binding = "Unassigned"
 id = "toggleNativeFullscreen"
 
 [[hotkeys]]
-binding = "Shift+Command+H"
+binding = "Control+Option+Shift+Left Arrow"
 id = "moveColumn.left"
 
 [[hotkeys]]
-binding = "Shift+Command+L"
+binding = "Control+Option+Shift+Right Arrow"
 id = "moveColumn.right"
 
 [[hotkeys]]
@@ -548,59 +547,59 @@ binding = "Unassigned"
 id = "moveColumn.down"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Home"
 id = "moveColumnToFirst"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+End"
 id = "moveColumnToLast"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+T"
 id = "toggleColumnTabbed"
 
 [[hotkeys]]
-binding = "Command+Page Up"
+binding = "Option+Home"
 id = "focusColumnFirst"
 
 [[hotkeys]]
-binding = "Command+Page Down"
+binding = "Option+End"
 id = "focusColumnLast"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+1"
 id = "focusColumn.0"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+2"
 id = "focusColumn.1"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+3"
 id = "focusColumn.2"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+4"
 id = "focusColumn.3"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+5"
 id = "focusColumn.4"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+6"
 id = "focusColumn.5"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+7"
 id = "focusColumn.6"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+8"
 id = "focusColumn.7"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+9"
 id = "focusColumn.8"
 
 [[hotkeys]]
@@ -676,11 +675,11 @@ binding = "Unassigned"
 id = "moveColumnToIndex.9"
 
 [[hotkeys]]
-binding = "Command+R"
+binding = "Option+Period"
 id = "cycleSizeForward"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Comma"
 id = "cycleSizeBackward"
 
 [[hotkeys]]
@@ -700,7 +699,7 @@ binding = "Unassigned"
 id = "cycleWindowSecondarySpanBackward"
 
 [[hotkeys]]
-binding = "Command+F"
+binding = "Option+Shift+F"
 id = "toggleContainerFullPrimarySpan"
 
 [[hotkeys]]
@@ -712,11 +711,11 @@ binding = "Control+Option+R"
 id = "resetWindowSecondarySpan"
 
 [[hotkeys]]
-binding = "Command+Minus"
+binding = "Option+Minus"
 id = "setContainerPrimarySpan.decrease10Percent"
 
 [[hotkeys]]
-binding = "Command+Equal"
+binding = "Option+Equal"
 id = "setContainerPrimarySpan.increase10Percent"
 
 [[hotkeys]]
@@ -736,7 +735,7 @@ binding = "Option+Shift+Equal"
 id = "setWindowSecondarySpan.increase10Percent"
 
 [[hotkeys]]
-binding = "Shift+Command+B"
+binding = "Option+Shift+B"
 id = "balanceSizes"
 
 [[hotkeys]]
@@ -796,31 +795,31 @@ binding = "Unassigned"
 id = "preselectClear"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+Space"
 id = "openCommandPalette"
 
 [[hotkeys]]
-binding = "Control+Option+Command+V"
+binding = "Option+Shift+R"
 id = "raiseAllFloatingWindows"
 
 [[hotkeys]]
-binding = "Command+F12"
+binding = "Unassigned"
 id = "rescueOffscreenWindows"
 
 [[hotkeys]]
-binding = "Shift+Command+V"
+binding = "Unassigned"
 id = "toggleFocusedWindowFloating"
 
 [[hotkeys]]
-binding = "Shift+Command+Space"
+binding = "Unassigned"
 id = "assignFocusedWindowToScratchpad"
 
 [[hotkeys]]
-binding = "Command+Space"
+binding = "Unassigned"
 id = "toggleScratchpadWindow"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Control+Option+M"
 id = "openMenuAnywhere"
 
 [[hotkeys]]
@@ -832,88 +831,20 @@ binding = "Unassigned"
 id = "toggleHiddenBarPanel"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Grave"
 id = "toggleQuakeTerminal"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Shift+L"
 id = "toggleWorkspaceLayout"
 
 [[hotkeys]]
-binding = "Command+O"
+binding = "Option+Shift+O"
 id = "toggleOverview"
 
 [[hotkeys]]
 binding = "Unassigned"
 id = "toggleSystemStats"
-
-[[monitorBarOverrides]]
-backgroundOpacity = 0.05
-id = "52C7BF93-4556-469E-BC80-599661DC6405"
-monitorName = "Built-in Retina Display"
-notchMode = "moveBelowMenuBar"
-position = "belowMenuBar"
-xOffset = 0.0
-yOffset = -10.0
-
-[[monitorBarOverrides]]
-enabled = false
-id = "9EBCD7A1-7DD3-43C0-9E71-7B18EE836AA3"
-monitorDisplayUUID = "37D8832A-2D66-02CA-B9F7-8F30A301B230"
-monitorName = "Built-in Retina Display"
-
-[[monitorGapOverrides]]
-id = "BE9617A8-1CC3-4300-9650-BA6FCB33F0E8"
-monitorName = "Built-in Retina Display"
-outerGapTop = 64.0
-
-[[monitorGapOverrides]]
-id = "6DD0E3E6-1A81-44D5-8DE5-FD92B85D71D0"
-monitorDisplayUUID = "BB277CAB-AEF1-4BFF-ABEB-7FFE1FE0912B"
-monitorName = "LG HDR WQHD"
-outerGapBottom = 20.0
-outerGapTop = 44.0
-
-[[monitorNiriOverrides]]
-id = "DE230450-EDBD-4A64-A33E-1AFC7FF7E665"
-monitorDisplayUUID = "BB277CAB-AEF1-4BFF-ABEB-7FFE1FE0912B"
-monitorName = "LG HDR WQHD"
-singleWindowFit = "2800x1440"
-visibleContainerCount = 3
-
-[[monitorRoutingOverrides]]
-gridColumn = 0
-gridRow = 0
-monitorName = "Built-in Retina Display"
-
-[[monitorRoutingOverrides]]
-gridColumn = 1
-gridRow = 0
-monitorName = "DELL P2423D (2)"
-
-[[monitorRoutingOverrides]]
-gridColumn = 2
-gridRow = 0
-monitorDisplayId = 3
-monitorName = "DELL P2423D (1)"
-
-[[monitorRoutingOverrides]]
-gridColumn = 0
-gridRow = 0
-monitorDisplayUUID = "37D8832A-2D66-02CA-B9F7-8F30A301B230"
-monitorName = "Built-in Retina Display"
-
-[[monitorRoutingOverrides]]
-gridColumn = 1
-gridRow = 0
-monitorDisplayUUID = "A6640A6F-68A5-40A1-9EF1-249071518015"
-monitorName = "DELL P2423D (2)"
-
-[[monitorRoutingOverrides]]
-gridColumn = 2
-gridRow = 0
-monitorDisplayUUID = "04FEB934-3167-4BE1-A01E-95DDEEC5C6BF"
-monitorName = "DELL P2423D (1)"
 
 [[workspaces]]
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
@@ -956,45 +887,19 @@ name = "5"
 type = "main"
 
 [[workspaces]]
+displayName = "❤️"
 id = "5953F2BF-A378-4266-91B2-287174C4FA4D"
 layoutType = "niri"
 name = "6"
 
 [workspaces.monitorAssignment]
-type = "specificDisplay"
-
-[workspaces.monitorAssignment.output]
-displayId = 1
-name = "Built-in Retina Display"
+type = "secondary"
 
 [[workspaces]]
+displayName = "🚀"
 id = "A7D5E104-6985-4516-8ED5-07F144F2A33D"
 layoutType = "niri"
 name = "7"
 
 [workspaces.monitorAssignment]
-type = "main"
-
-[[workspaces]]
-id = "9B57C9DF-91B8-490A-8BFD-0DF6B98F6AD4"
-layoutType = "niri"
-name = "8"
-
-[workspaces.monitorAssignment]
-type = "specificDisplay"
-
-[workspaces.monitorAssignment.output]
-displayId = 3
-name = "LG HDR WQHD"
-
-[[workspaces]]
-id = "13958267-0737-4B69-91CD-084F03318D6B"
-layoutType = "niri"
-name = "9"
-
-[workspaces.monitorAssignment]
-type = "specificDisplay"
-
-[workspaces.monitorAssignment.output]
-displayId = 3
-name = "LG HDR WQHD"
+type = "secondary"
