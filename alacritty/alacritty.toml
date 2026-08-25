@@ -1,24 +1,33 @@
 [general]
 ipc_socket=false
 import = [
-    "~/.config/alacritty/themes/themes/solarized_osaka.toml"
+    "~/.config/alacritty/themes/themes/kanagawa_wave.toml"
+]
+
+    #"~/.config/alacritty/themes/themes/kanagawa_wave.toml"
+   # "~/.config/alacritty/themes/themes/kanagawa_dragon.toml"
+    
+[keyboard]
+bindings = [
+{key = "T", mods = "Command", action = "SelectNextTab"},
 ]
 
 [env]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 10
-padding.y = 10
+padding.x = 24
+padding.y = 24
 
-decorations = "Buttonless"
+decorations = "none"
 
 
 #opacity = 0.30
-opacity = 1
 #opacity = 0.5
+opacity = 0.95
+#opacity = 1
 
-blur = true
+blur = false
 
 #option_as_alt = "Both"
 
